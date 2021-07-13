@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Jedd Lupoy Portfolio</title>
+        <title>Jedd Lupoy — Portfolio</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <h1>Hello world!</h1>
+        <div id="wrapper">
+            <nav>
+                <a href="#"><strong>jeddlupoy</strong>.com</a>
+                <div class="navItems">
+                    <a href="#" class="hover-animate">Portfolio</a>
+                    <a href="#" class="hover-animate">Contact</a>
+                </div>
+            </nav>
+    
+            <header>
+                <h1>Hi, I'm Jedd.</h1>
+                <h5>Software Engineering Student</h5>
+                <br>
+                <p>I am currently studying <span class="red">Software Engineering</span> at the <span class="purple">University of Waikato</span>. I have dabbled in web development, programming and server hosting and management.</p>
+                <p>Portfolio Coming Soon</p>
+            </header>
+
+            <section>
+                <div class="contact">
+                    <script> </script>
+                    <form action="https://formspree.io/jedd.lupoy@gmail.com" method="POST">
+                        <label>
+                            <input type="email" name="email" class="email" placeholder="Email">
+                        </label>
+                        <label>
+                            <input type="text" name="subject" class="subject" placeholder="Subject">
+                        </label>
+                        <label>
+                            <textarea name="message" class="message" placeholder="Message"></textarea>
+                        </label>
+                        <div class="status"></div>
+                        <button type="submit" class="submit">Send Message</button>
+                    </form>
+                </div>
+            </section>
+
+            <footer>
+                <p>Designed and Built by Jedd Lupoy</p>
+            </footer>
+        </div>
     </body>
 </html>
