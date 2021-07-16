@@ -5,7 +5,7 @@
     color: #eee;
 }
 
-#wrapper {
+#wrapper, section.portfolio-grid {
     max-width: 1000px;
     margin: auto;
 }
@@ -85,8 +85,40 @@ header button {
     margin: auto;
 }
 
+header.portfolio-grid {
+    height: 250px;
+}
+
+figure {
+    margin: 0;
+    position: relative;
+}
+
+figcaption {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    bottom: 25px;
+    left: 15px;
+    background-color: #333;
+    color: #eee;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
 .landing-image {
     width: 80%;
+}
+
+.about {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.about img {
+    width: 100%;
 }
 
 .code {
@@ -169,6 +201,7 @@ button {
 .column {
     width: 50%;
     padding: 5px;
+    overflow: hidden;
 }
 
 .column-20 {
@@ -204,5 +237,38 @@ button {
     transform: scale(1.2);
     filter: grayscale(100%) brightness(60%);
     -webkit-filter: grayscale(100%) brightness(60%);
+    transition: 0.3s;
+}
+
+.whole-page {
+    height: 100vh;
+    position: relative;
+}
+
+.vertical-centre {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    position: absolute;
+    margin: auto;
+}
+
+.portfolio img {
+    width: 100%;
+    display: block;
+    transition: 0.3s;
+}
+
+.portfolio img:hover {
+    transform: scale(1.2);
+    filter: grayscale(100%) brightness(60%);
+    -webkit-filter: grayscale(100%) brightness(60%);
+    transition: 0.3s;
+}
+
+.portfolio:hover figcaption {
+    visibility: visible;
+    bottom: 15px;
+    opacity: 1;
     transition: 0.3s;
 }
