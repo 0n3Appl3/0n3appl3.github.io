@@ -2,6 +2,10 @@
 <html lang="en">
     <head>
         <title>Jedd Lupoy — Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Jedd Lupoy">
+	    <meta name="description" content="Hi, I'm Jedd. I am currently studying Software Engineering at the University of Waikato. I have dabbled in web development, programming and server hosting and management.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
         <link rel="shortcut icon" type="image/png" href="images/favicon.gif">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,12 +14,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+        <script src="https://unpkg.com/scrollreveal@4"></script>
         <script src="./smoothscroll.js"></script>
     </head>
 
     <body>
         <div id="wrapper">
-            <nav>
+            <nav id="menu">
                 <a href="index.html"><strong>jeddlupoy</strong>.com</a>
                 <div class="navItems">
                     <a href="https://github.com/0n3Appl3" target="_blank" class="hover-animate"><i class="fa fa-github"></i></a>
@@ -32,7 +37,7 @@
 
             <section class="portfolio-grid">
                 <div class="row">
-                    <div class="column portfolio">
+                    <div id="reveal" class="column portfolio">
                         <div class="frame">
                             <figure>
                                 <a href="https://appl3pvp.com/" target="_blank">
@@ -43,7 +48,7 @@
                         </div>
                     </div>
 
-                    <div class="column portfolio">
+                    <div id="reveal" class="column portfolio">
                         <div class="frame">
                             <figure>
                                 <a href="https://corruptedfilms.appl3pvp.com/" target="_blank">
@@ -56,7 +61,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="column portfolio">
+                    <div id="reveal" class="column portfolio">
                         <div class="frame">
                             <figure>
                                 <a href="https://www.youtube.com/channel/UCfmLZ-ld8Qy4oNwXGdD_Nrg" target="_blank">
@@ -67,7 +72,7 @@
                         </div>
                     </div>
 
-                    <div class="column portfolio">
+                    <div id="reveal" class="column portfolio">
                         <div class="frame">
                             <figure>
                                 <a href="https://github.com/0n3Appl3/solaris" target="_blank">
@@ -80,7 +85,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="column portfolio">
+                    <div id="reveal" class="column portfolio">
                         <div class="frame">
                             <figure>
                                 <a href="https://github.com/0n3Appl3/mangoweather" target="_blank">
@@ -91,7 +96,7 @@
                         </div>
                     </div>
 
-                    <div class="column portfolio">
+                    <div id="reveal" class="column portfolio">
                         <div class="frame">
                             <figure>
                                 <a href="https://0n3appl3.github.io/polygon/" target="_blank">
@@ -133,5 +138,10 @@
                 <p>Designed and Built by Jedd Lupoy</p>
             </footer>
         </div>
+
+        <script>
+            ScrollReveal().reveal('#menu', { distance: '-50px', reset: true });
+            ScrollReveal().reveal('#reveal', { distance: '30px', interval: 200, delay: 100, reset: true });
+        </script>
     </body>
 </html>

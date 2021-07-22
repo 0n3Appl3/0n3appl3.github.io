@@ -2,6 +2,10 @@
 <html lang="en">
     <head>
         <title>Jedd Lupoy — Home</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Jedd Lupoy">
+	    <meta name="description" content="Hi, I'm Jedd. I am currently studying Software Engineering at the University of Waikato. I have dabbled in web development, programming and server hosting and management.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
         <link rel="shortcut icon" type="image/png" href="images/favicon.gif">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,12 +14,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+        <script src="https://unpkg.com/scrollreveal@4"></script>
         <script src="./smoothscroll.js"></script>
     </head>
 
     <body>
         <div id="wrapper">
-            <nav>
+            <nav id="menu">
                 <a href="index.html"><strong>jeddlupoy</strong>.com</a>
                 <div class="navItems">
                     <a href="https://github.com/0n3Appl3" target="_blank" class="hover-animate"><i class="fa fa-github"></i></a>
@@ -26,10 +31,10 @@
             </nav>
 
             <header>
-                <h1>Hi, I'm Jedd.</h1>
-                <h5>Software Engineering Student</h5>
+                <h1 id="reveal">Hi, I'm Jedd.</h1>
+                <h5 id="reveal">Software Engineering Student</h5>
                 <br>
-                <p>I am currently studying <span class="red">Software Engineering</span> at the <span class="purple">University of Waikato</span>. I have dabbled in web development, programming and server hosting and management.</p>
+                <p id="reveal">I am currently studying <span class="red">Software Engineering</span> at the <span class="purple">University of Waikato</span>. I have dabbled in web development, programming and server hosting and management.</p>
                 <button type="button" onClick='window.location.href="portfolio.html"'>View Portfolio</button>
                 <img src="images/macbookpro.png" class="landing-image" alt="MacBook Pro graphic by Mirko Monti">
             </header>
@@ -84,5 +89,10 @@
                 <p>Designed and Built by Jedd Lupoy</p>
             </footer>
         </div>
+
+        <script>
+            ScrollReveal().reveal('#menu', { distance: '-50px', reset: true });
+            ScrollReveal().reveal('#reveal', { distance: '-20px', interval: 300, delay: 300 });
+        </script>
     </body>
 </html>

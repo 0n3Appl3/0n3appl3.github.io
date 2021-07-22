@@ -272,3 +272,62 @@ button {
     opacity: 1;
     transition: 0.3s;
 }
+
+@media screen and (max-width: 950px) {
+	header {
+		padding: 30px;
+	}
+}
+
+@media screen and (max-width: 770px) {
+    section {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        height: auto;
+    }
+
+    .whole-page {
+        display: block;
+    }
+
+	header h1 {
+		font-size: 4em;
+	}
+
+    header h5 {
+        font-size: 1.5em;
+    }
+
+    header p {
+        font-size: 0.8em;
+        padding-bottom: 40px;
+    }
+
+    .landing-image {
+        width: 100%;
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+	.column {
+        width: 100%;
+        padding: 5px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+	header h1 {
+		font-size: 2.7em;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	nav a {
+		font-size: 0.75em;
+	}
+}
