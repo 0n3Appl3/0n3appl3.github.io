@@ -6,7 +6,7 @@
 }
 
 #wrapper, section.portfolio-grid {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -60,7 +60,6 @@ nav a {
 
 header {
     text-align: center;
-    height: 100vh;
 }
 
 header h1 {
@@ -109,7 +108,7 @@ figcaption {
 }
 
 .landing-image {
-    width: 80%;
+    width: 80vh;
 }
 
 .about {
@@ -130,6 +129,10 @@ section {
     margin: auto;
 }
 
+section > .sect, header {
+    padding-bottom: 15rem;
+}
+
 p {
     font-size: 0.9em;
 }
@@ -141,6 +144,18 @@ p {
 footer {
     text-align: center;
     padding: 20px;
+}
+
+/* Display columns of information */
+#list {
+    display: grid;
+}
+
+/* Display films */
+#list {
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 4rem;
+    padding-bottom: 10rem;
 }
 
 .contact {
@@ -240,17 +255,8 @@ button {
     transition: 0.3s;
 }
 
-.whole-page {
-    height: 100vh;
-    position: relative;
-}
-
-.vertical-centre {
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    position: absolute;
-    margin: auto;
+.portfolio {
+    padding: 5px;
 }
 
 .portfolio img {
@@ -310,6 +316,18 @@ button {
     .landing-image {
         width: 100%;
         padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 770px) {
+    #list {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
