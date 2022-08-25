@@ -93,6 +93,10 @@ figure {
     position: relative;
 }
 
+figure a:hover {
+    cursor: pointer;
+}
+
 figcaption {
     position: absolute;
     visibility: hidden;
@@ -346,6 +350,16 @@ button {
     bottom: 15px;
     opacity: 1;
     transition: 0.3s;
+}
+
+@media screen and (max-width: 1100px) {
+    #item-content {
+        width: 90%;
+    }
+    
+    #item-content #image {
+        height: 10rem;
+    }
 }
 
 @media screen and (max-width: 950px) {
