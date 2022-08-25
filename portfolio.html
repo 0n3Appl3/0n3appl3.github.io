@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
         <script src="https://unpkg.com/scrollreveal@4"></script>
+        <script src="./modal.js" defer></script>
         <script src="./smoothscroll.js"></script>
     </head>
 
@@ -30,6 +31,18 @@
                 </div>
             </nav>
 
+            <div id="selected-item">
+                <div id="item-content">
+                    <div id="image"></div>
+                    <div id="content">
+                        <p id="project"></p>
+                        <button id="link" onclick="" target="_blank">View Project</button>
+                        <p id="description"></p>
+                        <div id="languages"></div>
+                    </div>
+                </div>
+            </div>
+
             <header class="portfolio-grid">
                 <h1>Portfolio</h1>
                 <p>Here are all projects that I have worked on.</p>
@@ -39,7 +52,7 @@
                 <div id="reveal" class="portfolio">
                     <div class="frame">
                         <figure>
-                            <a href="https://appl3pvp.com/" target="_blank">
+                            <a onclick="displayContent(0);">
                                 <img src="images/appl3pvp.png" alt="Appl3 PvP">
                             </a>
                             <figcaption>Appl3 PvP Website</figcaption>
@@ -50,7 +63,7 @@
                 <div id="reveal" class="portfolio">
                     <div class="frame">
                         <figure>
-                            <a href="https://www.youtube.com/channel/UCfmLZ-ld8Qy4oNwXGdD_Nrg" target="_blank">
+                            <a onclick="displayContent(1);">
                                 <img src="images/appl3pvp-java-plugins.png" alt="Appl3 PvP Java Plugins">
                             </a>
                             <figcaption>Appl3 PvP Java Dev</figcaption>
@@ -61,7 +74,7 @@
                 <div id="reveal" class="portfolio">
                     <div class="frame">
                         <figure>
-                            <a href="http://assimilate.co.nz/" target="_blank">
+                            <a onclick="displayContent(2);">
                                 <img src="images/assimilate.png" alt="Assimilate Limited">
                             </a>
                             <figcaption>Assimilate Limited</figcaption>
@@ -72,7 +85,7 @@
                 <div id="reveal" class="portfolio">
                     <div class="frame">
                         <figure>
-                            <a href="https://corruptedfilms.appl3pvp.com/" target="_blank">
+                            <a onclick="displayContent(3);">
                                 <img src="images/corruptedfilms.png" alt="Corrupted Films">
                             </a>
                             <figcaption>Corrupted Films Website</figcaption>
@@ -83,7 +96,7 @@
                 <div id="reveal" class="portfolio">
                     <div class="frame">
                         <figure>
-                            <a href="https://github.com/0n3Appl3/solaris" target="_blank">
+                            <a onclick="displayContent(4);">
                                 <img src="images/solaris.png" alt="Solaris Bot">
                             </a>
                             <figcaption>Solaris Discord</figcaption>
@@ -94,7 +107,7 @@
                 <div id="reveal" class="portfolio">
                     <div class="frame">
                         <figure>
-                            <a href="https://github.com/0n3Appl3/bakerplusbot" target="_blank">
+                            <a onclick="displayContent(5);">
                                 <img src="images/bakerplusbot.png" alt="Baker+ Bot">
                             </a>
                             <figcaption>Baker+ Discord</figcaption>
@@ -105,7 +118,7 @@
                 <div id="reveal" class="portfolio">
                     <div class="frame">
                         <figure>
-                            <a href="https://0n3appl3.github.io/quoteme/" target="_blank">
+                            <a onclick="displayContent(6);">
                                 <img src="images/quoteme.png" alt="Quote Me">
                             </a>
                             <figcaption>Quote Me</figcaption>
@@ -116,7 +129,7 @@
                 <div id="reveal" class="portfolio">
                     <div class="frame">
                         <figure>
-                            <a href="https://github.com/0n3Appl3/spotify-fuchsia" target="_blank">
+                            <a onclick="displayContent(7);">
                                 <img src="images/spotify-fuchsia.png" alt="Spotify Fuchsia">
                             </a>
                             <figcaption>Spotify Fuchsia</figcaption>
@@ -127,7 +140,7 @@
                 <div id="reveal" class="portfolio">
                     <div class="frame">
                         <figure>
-                            <a href="https://github.com/0n3Appl3/light" target="_blank">
+                            <a onclick="displayContent(8);">
                                 <img src="images/light.png" alt="Light">
                             </a>
                             <figcaption>Light</figcaption>
@@ -138,7 +151,7 @@
                 <div id="reveal" class="portfolio">
                     <div class="frame">
                         <figure>
-                            <a href="https://0n3appl3.github.io/polygon/" target="_blank">
+                            <a onclick="displayContent(9);">
                                 <img src="images/polygon.png" alt="Polygon">
                             </a>
                             <figcaption>Polygon</figcaption>
@@ -149,7 +162,7 @@
                 <div id="reveal" class="portfolio">
                     <div class="frame">
                         <figure>
-                            <a href="https://github.com/0n3Appl3/mangoweather" target="_blank">
+                            <a onclick="displayContent(10);">
                                 <img src="images/mangoweather.png" alt="Mango Weather">
                             </a>
                             <figcaption>Mango Weather</figcaption>
