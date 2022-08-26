@@ -80,7 +80,9 @@ header p, .code, .red, .purple {
 }
 
 header button {
+    display: block;
     text-align: center;
+    margin-top: 2rem !important;
     margin: auto;
 }
 
@@ -191,6 +193,10 @@ footer {
     overflow: hidden;
 }
 
+#item-content button {
+    display: inline-block;
+}
+
 #item-content #image {
     object-fit: cover;
     height: 20rem;
@@ -224,11 +230,33 @@ footer {
 }
 
 #languages span {
+    display: inline-block;
     background-color: #4a4747;
     border-radius: 1rem;
     font-size: 0.7rem;
     padding: 0.5rem 0.8rem;
     margin-right: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+#close, #close i {
+    background-color: #eee;
+    color: #333030;
+}
+
+#close {
+    display: inline-block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.3rem 0.7rem;
+    text-align: center;
+    border-radius: 5rem;
+    transition: 0.2s ease-in-out;
+}
+
+#close:hover {
+    cursor: pointer;
 }
 
 .contact {
