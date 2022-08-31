@@ -51,7 +51,7 @@ const data = [
         description: "Solaris is a friendly virtual assistant built to serve players who are on the Appl3 PvP Discord server. It can provide tutorial videos to players who need it and show how many credits a player currently has on them along with a competitive leaderboard for the richest player on the server.",
         link: "https://github.com/0n3Appl3/solaris/",
         bannerimg: "images/solaris.png",
-        video: null,
+        video: "https://youtu.be/Pbd8b3KdDI8",
     },
     {
         name: "Baker+ Discord Bot",
@@ -83,7 +83,7 @@ const data = [
         description: "Light is a Python application that connects to the Philips Hue light ecosystem and controls one bulb by changing its colour based on the volume of the room. It picks up sound from the microphone of the computer the application is running and makes a great music visualiser.",
         link: "https://github.com/0n3Appl3/light/",
         bannerimg: "images/light.png",
-        video: null,
+        video: "https://youtu.be/4xiyQXBvNHA",
     },
     {
         name: "Polygon",
