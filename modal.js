@@ -40,7 +40,7 @@ const data = [
     {
         name: "Corrupted Films Website",
         languages: [1,2,3,4],
-        description: "Corrupted Films is a hobbyist production studio that specialises in producing Minecraft films (also known as machinimas). We strive to break the barriers of machinima creation to showcase Minecraft's cubic beauty through the use of mods. With each releasing project, Corrupted Films slowly bridges the gap between machinima and traditional animation.",
+        description: "Corrupted Films is a hobbyist production studio that specialises in producing Minecraft films (also known as machinimas). The goal is to showcase Minecraft's cubic beauty through great cinematography and storytelling, and demonstrate the game's viability as a medium to create films. With each releasing project, Corrupted Films slowly bridges the gap between machinima and traditional animation.",
         link: "https://corruptedfilms.appl3pvp.com/",
         bannerimg: "images/corruptedfilms.png",
         video: null,
