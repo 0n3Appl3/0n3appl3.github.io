@@ -9,7 +9,8 @@ const lang = [
     "Spigot API",
     "Python",
     "Spotify Web API",
-    "Ajax"
+    "Ajax",
+    "Vue.js",
 ];
 
 const data = [
@@ -100,6 +101,14 @@ const data = [
         link: "https://github.com/0n3Appl3/mangoweather/",
         bannerimg: "images/mangoweather.png",
         video: "https://youtu.be/IjxHYFvyaOw",
+    },
+    {
+        name: "Code Paste",
+        languages: [1,2,3,5,11],
+        description: "Code Paste is a simple code viewer and editor web application for your quick code snippet sharing needs. They are high-quality images that can be used on reports or to simply share code with other programmers.",
+        link: "https://jeddlupoy.com/code-paste/",
+        bannerimg: "images/codepaste.png",
+        video: null,
     },
 ];
 
