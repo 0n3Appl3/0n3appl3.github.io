@@ -108,4 +108,13 @@ button:hover {
         margin: 0 1.5rem;
     }
 }
+@media screen and (max-width: 600px) {
+    .modal {
+        padding-top: 50px;
+    }
+    .modal__content {
+        max-height: 80%;
+        overflow-y: scroll;
+    }
+}
 </style>
