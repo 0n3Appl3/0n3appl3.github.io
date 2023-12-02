@@ -51,7 +51,7 @@ i {
     right: 1rem;
 }
 .scroll-top-enter-active, .scroll-top-leave-active  {
-  transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .scroll-top-enter-from, .scroll-top-leave-to {
   opacity: 0;

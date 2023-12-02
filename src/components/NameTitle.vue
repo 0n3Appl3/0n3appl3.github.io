@@ -21,7 +21,7 @@ const buttons = ref([
 <template>
     <div class="name-title__container">
         <div class="name-title__name">Hi, I'm Jedd.</div>
-        <div class="name-title__title">Software Engineering Student</div>
+        <div class="name-title__title">Software Engineering Graduate</div>
         <div class="buttons__container">
             <ButtonLink :text="buttons[0].text" :anchor="buttons[0].anchor" />
             <ButtonLink :text="buttons[1].text" :anchor="buttons[1].anchor" />

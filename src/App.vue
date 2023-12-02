@@ -19,7 +19,7 @@ const clickedProject = ref({
 	video: String,
 })
 const headings = ref([
-	'I\'m a Software Engineering student with a passion for the web.',
+	'I\'m a Software Engineering graduate with a passion for the web.',
 	'Some projects I developed in my spare time.',
 	'Want to reach out? Send me a message!',
 ])
@@ -128,7 +128,7 @@ let modalOpen = ref(false)
 	<main>
 		<PageContent id="about" :text="headings[0]">
 			<h3>About Me</h3>
-			<h4>Hi, I'm Jedd. I'm a fourth-year Bachelor of Engineering with Honours BE(Hons) student majoring in Software Engineering at The University of Waikato.</h4>
+			<h4>Hi, I'm Jedd. I'm a graduate with a degree in the Bachelor of Engineering with Honours BE(Hons) majoring in Software Engineering.</h4>
 			<p>My interest in pursuing a career in software development started at an early age modding, referred to as "hacking" in the community, a game called Need for Madness. In my early high school years, Minecraft introduced me to web development, server management, and developing Java plugins.</p>
 			<p>To take my mind off programming, I focus on filmmaking and video editing as an outlet to express my enjoyment of writing and storytelling. I manage a small team at a hobbyist production studio called Corrupted Films which specialises in producing Minecraft machinimas, a film made using video game graphics.</p>
 			<p>Video games have been a huge part of my childhood, particularly racing games for its fast-paced energy which has influenced my appreciation for electronic and electro pop music.</p>
