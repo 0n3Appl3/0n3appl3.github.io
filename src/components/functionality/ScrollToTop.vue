@@ -13,14 +13,14 @@ window.addEventListener('scroll', () => {
 </script>
 
 <template>
-    <transition name="scroll-top">
+    <Transition name="scroll-top">
         <div v-if="show" class="scroll-top__container">
             <a v-smooth-scroll href="#home">
                 Go To Top
                 <i class="bi bi-arrow-up-circle-fill"></i>
             </a>
         </div>
-    </transition>
+    </Transition>
 </template>
 
 <style scoped>
@@ -55,6 +55,6 @@ i {
 }
 .scroll-top-enter-from, .scroll-top-leave-to {
   opacity: 0;
-  transform: translateY(-50px);
+  transform: translateY(-20px);
 }
 </style>

@@ -45,17 +45,32 @@ const buttons = ref([
 .buttons__container {
     padding-top: 5rem;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1400px) {
     .name-title__title {
         font-size: 2.5rem;
     }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
     .name-title__name {
         font-size: 4rem;
     }
     .name-title__title {
         font-size: 2rem;
+    }
+}
+@media screen and (max-width: 700px) {
+    .buttons__container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: absolute;
+        bottom: 1rem;
+    }
+    .name-title__name {
+        font-size: 3.5rem;
+    }
+    .name-title__title {
+        font-size: 1.5rem;
     }
 }
 @media screen and (max-width: 500px) {
