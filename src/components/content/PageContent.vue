@@ -68,6 +68,11 @@ h2 {
 :slotted(a):active {
     color: #8e32ff;
 }
+@media screen and (max-height: 700px) {
+    h2 {
+        font-size: 2.3rem;
+    }
+}
 @media screen and (max-width: 700px) {
     h2 {
         font-size: 3rem;

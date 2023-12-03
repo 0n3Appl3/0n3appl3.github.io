@@ -89,6 +89,7 @@
 	.orb__container {
 		top: 35%;
 		width: 450px;
+		height: 65%;
 	}
 	.orb__container-two {
 		width: 300px;
