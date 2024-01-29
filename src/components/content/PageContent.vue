@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import ScrollPrompt from '../graphics/ScrollPrompt.vue';
+
 defineProps({
     text: {
         type: String,
@@ -11,6 +13,7 @@ defineProps({
     <div class="page__container">
         <div class="page__heading">
             <h2>{{ text }}</h2>
+            <ScrollPrompt/>
         </div>
         <div>
             <slot />
@@ -30,6 +33,7 @@ h2 {
 }
 .page__heading {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     height: 100vh;
