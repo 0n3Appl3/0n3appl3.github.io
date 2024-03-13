@@ -73,6 +73,8 @@ button:hover {
     overflow: hidden;
 }
 .modal__header {
+    background-position: center;
+    background-size: cover;
     height: 100%;
     padding: 25px 25px 20rem 10rem;
 }

@@ -25,12 +25,13 @@ const headings = ref([
 ])
 const projectsList = ref([
 	{
-		title: 'Appl3 PvP',
-		summary: 'New Zealand-based Minecraft survival multiplayer server website.',
-		description: 'Appl3 PvP is a New Zealand-based Minecraft survival multiplayer server with a definitive goal of providing a fun and relaxed player experience without the unfair advantages of pay-to-win features similar servers have implemented. Despite its focus on connecting Oceania players, users worldwide are still more than welcome to join in on the fun.',
-		tools: ['HTML', 'CSS', 'JavaScript'],
-		thumbnail: './thumbnails/appl3pvp.png',
-		link: "https://appl3pvp.com/",
+		title: 'TimeLimit',
+		summary: 'Minecraft combat minigame with website integration.',
+		description: 'TimeLimit is a Minecraft PVP combat minigame plugin with the main goal of being the last player standing. At the start of the game, each player has 20 minutes left to live and they must prolong their elimination by defeating other players. Results of the game are saved in a database and can be viewed on a website.',
+		tools: ['Java', 'Spigot API', 'TypeScript', 'Node.js', 'React', 'MySQL'],
+		thumbnail: './thumbnails/timelimit.png',
+		link: "https://appl3pvp.com/timelimit",
+		video: "https://youtu.be/izlkUMkWJxI",
 	},
 	{
 		title: 'Server Plugin Development',
@@ -41,20 +42,29 @@ const projectsList = ref([
 		link: "https://www.youtube.com/channel/UCfmLZ-ld8Qy4oNwXGdD_Nrg",
 	},
 	{
-		title: 'Corrupted Films',
-		summary: 'Hobbyist production studio website.',
-		description: 'Corrupted Films is a hobbyist production studio that specialises in producing Minecraft films (also known as machinimas). The goal is to showcase Minecraft\'s cubic beauty through great cinematography and storytelling, and demonstrate the game\'s viability as a medium to create films. With each releasing project, Corrupted Films slowly bridges the gap between machinima and traditional animation.',
-		tools: ['HTML', 'CSS', 'JavaScript'],
-		thumbnail: './thumbnails/corruptedfilms.png',
-		link: "https://corruptedfilms.appl3pvp.com/",
-	},
-	{
 		title: 'Code Paste',
 		summary: 'Code viewer and editor web application for code sharing.',
 		description: 'Code Paste is a simple code viewer and editor web application for your quick code snippet sharing needs. They are high-quality images that can be used on reports or to simply share code with other programmers.',
-		tools: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Vue.js'],
+		tools: ['HTML / CSS', 'JavaScript', 'Node.js', 'Vue.js'],
 		thumbnail: './thumbnails/codepaste.png',
 		link: "https://jeddlupoy.com/code-paste/",
+	},
+	{
+		title: 'Tetris',
+		summary: 'The popular geometric puzzle game.',
+		description: 'This version of Tetris is inspired by the game I grew up with called Tetris 4000, which uses a similar block colour palette and background image.',
+		tools: ['Java'],
+		thumbnail: './thumbnails/tetris.png',
+		link: "https://github.com/0n3Appl3/tetris",
+		video: "https://youtu.be/6xxFV0sBrTU?si=6W8OrdLgfr5NNRiG",
+	},
+	{
+		title: 'Corrupted Films',
+		summary: 'Hobbyist production studio website.',
+		description: 'Corrupted Films is a hobbyist production studio that specialises in producing Minecraft films (also known as machinimas). The goal is to showcase Minecraft\'s cubic beauty through great cinematography and storytelling, and demonstrate the game\'s viability as a medium to create films. With each releasing project, Corrupted Films slowly bridges the gap between machinima and traditional animation.',
+		tools: ['HTML / CSS', 'JavaScript'],
+		thumbnail: './thumbnails/corruptedfilms.png',
+		link: "https://corruptedfilms.appl3pvp.com/",
 	},
 	{
 		title: 'Solaris Bot',
@@ -65,11 +75,11 @@ const projectsList = ref([
 		link: "https://github.com/0n3Appl3/solaris/",
 		video: "https://youtu.be/Pbd8b3KdDI8",
 	},
-		{
+	{
 		title: 'Quote Me',
 		summary: 'Simple generator for a quick way to format quotes.',
 		description: "Quote Me is a simple quote generator for anyone looking for a quick and easy way to have a quote formatted and readily available for download. This project was inspired by a few online friends who enjoy sharing their favourite chat moments on Discord.",
-		tools: ['HTML', 'CSS', 'JavaScript'],
+		tools: ['HTML / CSS', 'JavaScript'],
 		thumbnail: './thumbnails/quoteme.png',
 		link: "https://jeddlupoy.com/quoteme/",
 		video: "https://youtu.be/LiDjXhAehoY",
@@ -78,7 +88,7 @@ const projectsList = ref([
 		title: 'Spotify Fuchsia',
 		summary: 'Minimalistic music visualiser and artist look-up web application.',
 		description: "Spotify Fuchsia is a minimalistic music visualiser and artist look-up website made to animate a user's music listening experience. This was a project to experiment with the Spotify Web API, though its usage is limited to Spotify Premium users.",
-		tools: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Spotify Web API'],
+		tools: ['HTML / CSS', 'JavaScript', 'Node.js', 'Spotify Web API'],
 		thumbnail: './thumbnails/spotify-fuchsia.png',
 		link: "https://github.com/0n3Appl3/spotify-fuchsia/",
 		video: "https://youtu.be/GCCC8mwJYM8",
@@ -96,19 +106,10 @@ const projectsList = ref([
 		title: 'Polygon',
 		summary: 'Avoid the coloured blocks for as long as possible.',
 		description: "Polygon is a simple obstacle game where the only objective is to avoid the incoming square obstacles for as long as possible. This project was an introduction to JavaScript game development using canvas.",
-		tools: ['HTML', 'CSS', 'JavaScript'],
+		tools: ['HTML / CSS', 'JavaScript'],
 		thumbnail: './thumbnails/polygon.png',
 		link: "https://jeddlupoy.com/polygon/",
 		video: "https://youtu.be/KEmdokPKpZY",
-	},
-	{
-		title: 'Mango Weather',
-		summary: 'Simple weather forecast web application for New Zealand.',
-		description: "Mango Weather is a simple weather forecast web application with weather location data for New Zealand. This project was to experiment with the Open Weather Map web service by fetching data from their servers.",
-		tools: ['HTML', 'CSS', 'JavaScript'],
-		thumbnail: './thumbnails/mangoweather.png',
-		link: "https://github.com/0n3Appl3/mangoweather/",
-		video: "https://youtu.be/IjxHYFvyaOw",
 	},
 ])
 const github = ref('https://github.com/0n3Appl3')
@@ -128,7 +129,7 @@ let modalOpen = ref(false)
 	<main>
 		<PageContent id="about" :text="headings[0]">
 			<h3>About Me</h3>
-			<h4>Hi, I'm Jedd. I'm a graduate with a degree in the Bachelor of Engineering with Honours BE(Hons) majoring in Software Engineering.</h4>
+			<h4>Hi, I'm Jedd. I'm a Software Engineering graduate with a Bachelor of Engineering with Honours BE(Hons).</h4>
 			<p>My interest in pursuing a career in software development started at an early age modding, referred to as "hacking" in the community, a game called Need for Madness. In my early high school years, Minecraft introduced me to web development, server management, and developing Java plugins.</p>
 			<p>To take my mind off programming, I focus on filmmaking and video editing as an outlet to express my enjoyment of writing and storytelling. I manage a small team at a hobbyist production studio called Corrupted Films which specialises in producing Minecraft machinimas, a film made using video game graphics.</p>
 			<p>Video games have been a huge part of my childhood, particularly racing games for its fast-paced energy which has influenced my appreciation for electronic and electro pop music.</p>

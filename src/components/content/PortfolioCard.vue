@@ -18,20 +18,23 @@ const clickEvent = function() {
 </script>
 
 <template>
-    <div class="card__container" @click="clickEvent">
-        <div>
-            <div class="card__title">
-                {{ project.title ?? defaultProjectTitle }}
-                <i class="bi bi-box-arrow-up-right"></i>
+    <div>
+        <div class="card__container" @click="clickEvent">
+            <div>
+                <div class="card__title">
+                    {{ project.title ?? defaultProjectTitle }}
+                    <i class="bi bi-box-arrow-up-right"></i>
+                </div>
+                <p>{{ project.summary ?? defaultProjectSummary }}</p>
+                <div class="card__tags">
+                    <PortfolioTag v-for="tool in project.tools" :tag="tool" />
+                </div>
             </div>
-            <p>{{ project.summary ?? defaultProjectSummary }}</p>
-            <div class="card__tags">
-                <PortfolioTag v-for="tool in project.tools" :tag="tool" />
+            <div class="card__thumbnail">
+                <img :src="project.thumbnail" :alt="project.title" />
             </div>
         </div>
-        <div class="card__thumbnail">
-            <img :src="project.thumbnail" :alt="project.title" />
-        </div>
+        <hr/>
     </div>
 </template>
 
@@ -40,10 +43,15 @@ i {
     margin-left: 0.7rem;
     font-size: 1.1rem;
 }
+hr {
+    border: 1px solid var(--vt-c-divider-dark-2);
+    border-radius: 10px;
+}
 .card__container {
     display: grid;
     grid-template-columns: 70% 30%;
     padding: 1.5rem 0;
+    margin: 1rem 0;
     transform: scale(1);
     transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }

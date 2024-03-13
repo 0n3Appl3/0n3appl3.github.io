@@ -81,6 +81,12 @@ h2 {
     h2 {
         font-size: 3rem;
     }
+    :slotted(h3) {
+        background: linear-gradient(90deg, rgb(219, 43, 57) 0%, rgb(173, 42, 159) 30%, rgb(142, 50, 255) 65%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
 @media screen and (max-width: 400px) {
     h2 {
