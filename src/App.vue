@@ -56,7 +56,7 @@ const projectsList = ref([
 		tools: ['Java'],
 		thumbnail: './thumbnails/tetris.png',
 		link: "https://github.com/0n3Appl3/tetris",
-		video: "https://youtu.be/6xxFV0sBrTU?si=6W8OrdLgfr5NNRiG",
+		video: "https://youtu.be/yw_BC6sFDrk",
 	},
 	{
 		title: 'Corrupted Films',
