@@ -34,6 +34,15 @@ const projectsList = ref([
 		video: "https://youtu.be/izlkUMkWJxI",
 	},
 	{
+		title: 'Impulse',
+		summary: 'Email newsletter service.',
+		description: 'Almost half of the plugins on the server are custom-made by me and each one operates one crucial element of the survival multiplayer experience such as claiming, economy and quality-of-life commands.',
+		tools: ['JavaScript', 'Python', 'Node.js', 'Vue.js', 'MySQL'],
+		thumbnail: './thumbnails/impulse.png',
+		link: "https://appl3pvp.com/impulse",
+		video: "https://www.youtube.com/embed/7zrr6ldGy30?si=qUEv4lbBykls-SXR",
+	},
+	{
 		title: 'Server Plugin Development',
 		summary: 'Custom-made Java plugins for Appl3 PvP.',
 		description: 'Almost half of the plugins on the server are custom-made by me and each one operates one crucial element of the survival multiplayer experience such as claiming, economy and quality-of-life commands.',
@@ -101,15 +110,6 @@ const projectsList = ref([
 		thumbnail: './thumbnails/light.png',
 		link: "https://github.com/0n3Appl3/light/",
 		video: "https://youtu.be/4xiyQXBvNHA",
-	},
-	{
-		title: 'Polygon',
-		summary: 'Avoid the coloured blocks for as long as possible.',
-		description: "Polygon is a simple obstacle game where the only objective is to avoid the incoming square obstacles for as long as possible. This project was an introduction to JavaScript game development using canvas.",
-		tools: ['HTML / CSS', 'JavaScript'],
-		thumbnail: './thumbnails/polygon.png',
-		link: "https://jeddlupoy.com/polygon/",
-		video: "https://youtu.be/KEmdokPKpZY",
 	},
 ])
 const github = ref('https://github.com/0n3Appl3')
