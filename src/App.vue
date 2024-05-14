@@ -36,11 +36,11 @@ const projectsList = ref([
 	{
 		title: 'Impulse',
 		summary: 'Email newsletter service.',
-		description: 'Almost half of the plugins on the server are custom-made by me and each one operates one crucial element of the survival multiplayer experience such as claiming, economy and quality-of-life commands.',
+		description: 'Impulse is an email newsletter service for those who want to receive emails about what I am doing and thinking. It sends newletters to all subscribers on a schedule provided there is a new newsletter that has not yet been sent.',
 		tools: ['JavaScript', 'Python', 'Node.js', 'Vue.js', 'MySQL'],
 		thumbnail: './thumbnails/impulse.png',
 		link: "https://appl3pvp.com/impulse",
-		video: "https://www.youtube.com/embed/7zrr6ldGy30?si=qUEv4lbBykls-SXR",
+		video: "https://youtu.be/7zrr6ldGy30?si=4IvYb9RUrFf_x8US",
 	},
 	{
 		title: 'Server Plugin Development',
