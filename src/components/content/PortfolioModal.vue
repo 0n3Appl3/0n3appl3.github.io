@@ -90,8 +90,8 @@ button:hover {
     padding-top: 1.5rem;
 }
 .modal__close-button {
-    background-color: var(--color-background);
-    padding: 0.5rem 1rem;
+    background-color: var(--color-close-modal-button);
+    padding: 0.3rem 1rem;
     border-radius: 2rem;
     color: #eee;
     float: right;
