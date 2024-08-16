@@ -31,7 +31,7 @@ const highlightedProjectsList = ref([
 		description: 'TimeLimit is a Minecraft PVP combat minigame plugin with the main goal of being the last player standing. At the start of the game, each player has 20 minutes left to live and they must prolong their elimination by defeating other players. Results of the game are saved in a database and can be viewed on a website.',
 		tools: ['Java', 'Spigot API', 'TypeScript', 'Node.js', 'React', 'REST API', 'MySQL'],
 		thumbnail: './thumbnails/timelimit.png',
-		link: "https://appl3pvp.com/timelimit",
+		link: "https://timelimit.noxite.co.nz/",
 		video: "https://youtu.be/izlkUMkWJxI",
 	},
 	{
@@ -40,7 +40,7 @@ const highlightedProjectsList = ref([
 		description: 'Impulse is an email newsletter service for those who want to receive emails about what I am doing and thinking. It sends newletters to all subscribers on a schedule provided there is a new newsletter that has not yet been sent.',
 		tools: ['JavaScript', 'Python', 'Node.js', 'Vue.js', 'REST API', 'MySQL'],
 		thumbnail: './thumbnails/impulse.png',
-		link: "https://appl3pvp.com/impulse",
+		link: "https://impulse.noxite.co.nz/",
 		video: "https://youtu.be/7zrr6ldGy30?si=4IvYb9RUrFf_x8US",
 	},
 	{
