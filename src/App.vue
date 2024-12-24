@@ -4,11 +4,12 @@ import NameTitle from './components/NameTitle.vue'
 import NameDomain from './components/NameDomain.vue'
 import ScrollToTop from './components/functionality/ScrollToTop.vue'
 import GradientOrb from './components/graphics/GradientOrb.vue'
+import PageCard from './components/content/PageCard.vue';
 import PageContent from './components/content/PageContent.vue';
-import PortfolioCard from './components/content/PortfolioCard.vue';
 import PortfolioPreview from './components/content/PortfolioPreview.vue';
 import PortfolioModal from './components/content/PortfolioModal.vue'
-import ContactForm from './components/functionality/ContactForm.vue';
+import ButtonLink from './components/functionality/ButtonLink.vue';
+import ImageStack from './components/content/ImageStack.vue';
 
 const clickedProject = ref({
 	title: String,
@@ -19,11 +20,6 @@ const clickedProject = ref({
 	link: String,
 	video: String,
 })
-const headings = ref([
-	'I\'m a Software Engineering graduate with a passion for the web.',
-	'Some projects I developed in my spare time.',
-	'Want to reach out? Send me a message!',
-])
 const highlightedProjectsList = ref([
 {
 		title: 'TimeLimit',
@@ -44,9 +40,9 @@ const highlightedProjectsList = ref([
 		video: "https://youtu.be/7zrr6ldGy30?si=4IvYb9RUrFf_x8US",
 	},
 	{
-		title: 'Server Plugin Development',
-		summary: 'Custom-made Java plugins for Appl3 PvP.',
-		description: 'Almost half of the plugins on the server are custom-made by me and each one operates one crucial element of the survival multiplayer experience such as claiming, economy and quality-of-life commands.',
+		title: 'Noxite Plugins',
+		summary: 'Custom-made Java plugins for the Noxite server.',
+		description: 'Half of the plugins on the server are custom-made by me and each one operates one crucial element of the survival multiplayer experience such as claiming, economy and quality-of-life commands.',
 		tools: ['Java', 'Spigot API'],
 		thumbnail: './thumbnails/appl3pvp-java-plugins.png',
 		link: "https://www.youtube.com/channel/UCfmLZ-ld8Qy4oNwXGdD_Nrg",
@@ -59,8 +55,6 @@ const highlightedProjectsList = ref([
 		thumbnail: './thumbnails/codepaste.png',
 		link: "https://jeddlupoy.com/code-paste/",
 	},
-])
-const projectsList = ref([
 	{
 		title: 'Tetris',
 		summary: 'The popular geometric puzzle game.',
@@ -70,40 +64,12 @@ const projectsList = ref([
 		link: "https://github.com/0n3Appl3/tetris",
 		video: "https://youtu.be/sfZfY9o9biM?si=zozbnLuPI3x5VSYp",
 	},
-	{
-		title: 'Corrupted Films',
-		summary: 'Hobbyist production studio website.',
-		description: 'Corrupted Films is a hobbyist production studio that specialises in producing Minecraft films (also known as machinimas). The goal is to showcase Minecraft\'s cubic beauty through great cinematography and storytelling, and demonstrate the game\'s viability as a medium to create films. With each releasing project, Corrupted Films slowly bridges the gap between machinima and traditional animation.',
-		tools: ['HTML / CSS', 'JavaScript'],
-		thumbnail: './thumbnails/corruptedfilms.png',
-		link: "https://corruptedfilms.appl3pvp.com/",
-	},
-	{
-		title: 'Solaris Bot',
-		summary: 'Discord bot made to serve players on Appl3 PvP.',
-		description: 'Solaris is a friendly virtual assistant built to serve players who are on the Appl3 PvP Discord server. It can provide tutorial videos to players who need it and show how many credits a player currently has on them along with a competitive leaderboard for the richest player on the server.',
-		tools: ['JavaScript', 'Node.js', 'Discord.js', 'Python'],
-		thumbnail: './thumbnails/solaris.png',
-		link: "https://github.com/0n3Appl3/solaris/",
-		video: "https://youtu.be/Pbd8b3KdDI8",
-	},
-	{
-		title: 'Spotify Fuchsia',
-		summary: 'Minimalistic music visualiser and artist look-up web application.',
-		description: "Spotify Fuchsia is a minimalistic music visualiser and artist look-up website made to animate a user's music listening experience. This was a project to experiment with the Spotify Web API, though its usage is limited to Spotify Premium users.",
-		tools: ['HTML / CSS', 'JavaScript', 'Node.js', 'Spotify Web API'],
-		thumbnail: './thumbnails/spotify-fuchsia.png',
-		link: "https://github.com/0n3Appl3/spotify-fuchsia/",
-		video: "https://youtu.be/GCCC8mwJYM8",
-	},
 ])
-const github = ref('https://github.com/0n3Appl3')
-const linkedin = ref('https://www.linkedin.com/in/jeddlupoy/')
 let modalOpen = ref(false)
 </script>
 
 <template>
-	<NameDomain :github="github" :linkedin="linkedin"/>
+	<NameDomain/>
 	<Transition name="modal">
 		<PortfolioModal v-if="modalOpen" :project="clickedProject" @close="modalOpen = false"/>
 	</Transition>
@@ -112,45 +78,49 @@ let modalOpen = ref(false)
 	</header>
 	<GradientOrb />
 	<main>
-		<PageContent id="about" :text="headings[0]">
+		<PageContent id="about">
 			<h3>About Me</h3>
-			<h4>Hi, I'm Jedd. I'm a Software Engineering graduate with a Bachelor of Engineering with Honours.</h4>
-			<p>My interest in pursuing a career in software development started at an early age modding, referred to as "hacking" in the community, a game called Need for Madness. In my early high school years, Minecraft introduced me to web development, server management, and developing Java plugins.</p>
-			<p>To take my mind off programming, I focus on filmmaking and video editing as an outlet to express my enjoyment of writing and storytelling. I manage a small team at a hobbyist production studio called Corrupted Films which specialises in producing Minecraft machinimas, a film made using video game graphics.</p>
-			<p>Video games have been a huge part of my childhood, particularly racing games for its fast-paced energy which has influenced my appreciation for electronic and electro pop music.</p>
+			<h4>Kumusta, my name is Jedd. I'm a Software Engineer from the Philippines with a Bachelor of Engineering with Honours.</h4>
+			<p>I am passionate about software development, and thrive on collaborative teamwork to create meaningful solutions to everyday problems. Proficient in Java, Python, TypeScript and Vue.js, with experience building and testing REST APIs for backend web application systems. Strong willingness to learn new skills and embrace new technologies.</p>
+			<p>To take my mind off programming, I focus on filmmaking and video editing as an outlet to express my enjoyment of writing and storytelling. I manage a small team at a hobbyist production studio called Corrupted Films which specialises in producing machinimas, a film made using video game graphics.</p>
+			<div class="image-stack__container">
+				<ImageStack />
+			</div>
 		</PageContent>
-		<PageContent id="portfolio" :text="headings[1]">
-			<h3>Portfolio</h3>
-			<h4>It all started with a few hobbyist Minecraft projects. Here is a selection of my proudest work.</h4>
-			<p>My projects range from simple Discord bots to complex systems combining Minecraft and websites. These projects were completed in my spare time, and was a way for me to experiment with new libraries, frameworks, and concepts.</p>
+		<PageContent id="about">
+			<h3>Education</h3>
+			<div class="preview-grid__container">
+				<PageCard>
+					<h4>Bachelor of Engineering with Honours</h4>
+					<h5>University of Waikato</h5>
+					<h6>Feb 2020 - Oct 2023</h6>
+					<hr>
+					<p>Graduated with First Class Honours. Software Engineering as a specified programme.</p>
+				</PageCard>
+				<PageCard>
+					<h4>NCEA Level 3 Qualification</h4>
+					<h5>High School</h5>
+					<h6>Jan 2015 - Nov 2019</h6>
+					<hr>
+					<p>Graduated with Excellence Endorsement. NCEA Technology Scholarship recipient.</p>
+				</PageCard>
+			</div>
+		</PageContent>
+		<PageContent id="projects">
+			<h3>Projects</h3>
 			<div class="preview-grid__container">
 				<PortfolioPreview v-for="project in highlightedProjectsList"
 								:project="project"
 								@response="(p: any) => clickedProject = p"
 								@click="modalOpen = true" />
 			</div>
-			<PortfolioCard v-for="project in projectsList" 
-						   :project="project"
-						   @response="(p: any) => clickedProject = p"
-						   @click="modalOpen = true" />
 		</PageContent>
-		<PageContent id="contact" :text="headings[2]">
+		<PageContent id="contact">
 			<h3>Contact</h3>
 			<h4>Send me your questions and I will write back to you at the earliest convenience.</h4>
 			<p>Also take a look my GitHub profile if you are interested in checking out projects that are not listed under my portfolio. More information about myself on LinkedIn.</p>
-			<span>
-				<a :href="github" target="_blank">
-					<i class="bi bi-github"></i>
-					GitHub
-				</a>
-			</span>
-			<span>
-				<a :href="linkedin" target="_blank">
-					<i class="bi bi-linkedin"></i>
-					LinkedIn
-				</a>
-			</span>
-			<ContactForm />
+			<ButtonLink text="Send Email" anchor="mailto:jedd.lupoy@gmail.com" icon="bi-envelope" open-blank-page />
+			<h5><i class="bi bi-envelope-fill"></i>jedd.lupoy@gmail.com</h5>
 		</PageContent>
 	</main>
 	<ScrollToTop />
@@ -160,11 +130,17 @@ let modalOpen = ref(false)
 span a i {
 	margin-right: 0.2rem;
 }
+h5 i {
+	margin-right: 0.5rem;
+}
+.image-stack__container {
+	padding: 1rem;
+}
 .preview-grid__container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 1rem;
-	padding-top: 2rem;
+	padding: 2rem 0;
 }
 .modal-enter-active, .modal-leave-active {
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -176,6 +152,9 @@ span a i {
 @media screen and (max-width: 750px) {
 	.preview-grid__container {
 		display: block;
+	}
+	.image-stack__container {
+		padding: 0;
 	}
 }
 </style>

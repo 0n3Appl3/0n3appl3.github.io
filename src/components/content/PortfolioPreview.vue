@@ -12,6 +12,8 @@ const emit = defineEmits(['response'])
 const defaultProjectTitle = ref('Project Title')
 const defaultProjectSummary = ref('Project Summary.')
 
+const background = `linear-gradient(to bottom, #18181800 10%, #181818F8 70%), url(${props.project.thumbnail})`
+
 const clickEvent = function() {
     emit('response', props.project)
 }
@@ -20,9 +22,7 @@ const clickEvent = function() {
 <template>
     <div>
         <div class="preview__container" @click="clickEvent">
-            <div v-bind:style="{ 
-                backgroundImage: 'linear-gradient(to bottom, #18181800 10%, #181818F8 70%), url(' + project.thumbnail + ')'
-                }">
+            <div class="preview__background">
                 <div class="preview__content">
                     <p>
                         {{ project.title ?? defaultProjectTitle }}
@@ -48,21 +48,24 @@ i {
     transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     margin-bottom: 1rem;
 }
-.preview__container:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-}
 .preview__container > div {
     position: relative;
-    height: 30rem;
-    background-position: center;
-    border-radius: 1rem;
-    background-size: 120%;
-    transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+    overflow: hidden;
+    height: 25rem;
+    border-radius: 0.5rem;
 }
-.preview__container:hover > div {
-    background-size: 150%;
-    cursor: pointer;
+.preview__background::before {
+    content: '';
+    position: absolute;
+    background-size: 120%;
+    background-position: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: v-bind(background);
+    filter: grayscale(100%);
+    transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .preview__content {
     position: absolute;
@@ -75,6 +78,17 @@ i {
 }
 .preview__tags {
     padding-top: 1.2rem;
+}
+@media (hover: hover) and (pointer: fine) {
+    .preview__container:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+    .preview__background:hover::before {
+        background-size: 150%;
+        filter: grayscale(0%);
+        cursor: pointer;
+    }
 }
 @media screen and (max-width: 900px) {
     .preview__container > div {

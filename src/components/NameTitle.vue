@@ -4,16 +4,12 @@ import ButtonLink from './functionality/ButtonLink.vue';
 
 const buttons = ref([
     {
-        text: 'About',
-        anchor: '#about',
+        text: 'Download CV',
+        anchor: 'https://drive.google.com/file/d/13O7eu72i14nX9s6bZxFjulzn9ZJJiCpg/view?usp=sharing',
     },
     {
-        text: 'Portfolio',
-        anchor: '#portfolio',
-    },
-    {
-        text: 'Contact',
-        anchor: '#contact',
+        text: 'Browse Projects',
+        anchor: '#projects',
     },
 ])
 </script>
@@ -21,11 +17,10 @@ const buttons = ref([
 <template>
     <div class="name-title__container">
         <div class="name-title__name">Hi, I'm Jedd.</div>
-        <div class="name-title__title">Software Engineering Graduate</div>
+        <div class="name-title__title">Software Engineer</div>
         <div class="buttons__container">
-            <ButtonLink :text="buttons[0].text" :anchor="buttons[0].anchor" />
-            <ButtonLink :text="buttons[1].text" :anchor="buttons[1].anchor" />
-            <ButtonLink :text="buttons[2].text" :anchor="buttons[2].anchor" />
+            <ButtonLink :text="buttons[0].text" :anchor="buttons[0].anchor" icon="bi-download" open-blank-page />
+            <ButtonLink :text="buttons[1].text" :anchor="buttons[1].anchor" icon="bi-arrow-right" />
         </div>
     </div>
 </template>

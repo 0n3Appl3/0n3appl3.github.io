@@ -25,7 +25,7 @@
 .orb__container, .orb__container-two {
     position: absolute;
     background: rgb(219,43,57);
-	background: linear-gradient(54deg, rgba(219,43,57,1) 0%, rgba(173,42,159,1) 61%, rgba(142,50,255,1) 100%);
+	background: linear-gradient(110deg, #12c2e9 0%, #c471ed 50%, #f64f59);
     z-index: -1;
 }
 .orb__container {

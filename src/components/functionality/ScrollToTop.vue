@@ -29,17 +29,16 @@ a {
     text-decoration: none;
     font-size: 0.9rem;
     padding: 0 0.6rem;
-    border-radius: 2rem;
+    border-radius: 0.5rem;
     align-items: center;
     justify-content: center;
     border: 2px solid var(--color-text);
     background-color: var(--color-text);
     color: var(--color-background);
-    transition: all 0.15s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
-a:hover {
-    background-color: var(--color-background);
-    color: var(--color-text);
+a:active {
+    transform: translateY(-10px);
 }
 i {
     font-size: 1.5rem;
@@ -56,5 +55,11 @@ i {
 .scroll-top-enter-from, .scroll-top-leave-to {
   opacity: 0;
   transform: translateY(-20px);
+}
+@media (hover: hover) and (pointer: fine) {
+    a:hover {
+        background-color: var(--color-background);
+        color: var(--color-text);
+    }
 }
 </style>

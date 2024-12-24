@@ -18,8 +18,8 @@ const defaultTag = ref('Default Tag')
 span {
     display: inline-block;
     font-size: 0.8rem;
-    background-color: #db2b3a27;
-    color: #db2b39;
+    background-color: #f64f5927;
+    color: #f64f59;
     border-radius: 2rem;
     padding: 0.5rem 0.8rem;
     margin-right: 0.5rem;
