@@ -66,67 +66,96 @@ const highlightedProjectsList = ref([
 	},
 ])
 let modalOpen = ref(false)
+let background = ref("none")
+
+function updateBackground(event: { clientX: any; clientY: any }) {
+	background.value = `radial-gradient(600px at ${event.clientX}px ${event.clientY}px, #9c3a4066, transparent 80%)`
+}
 </script>
 
 <template>
-	<NameDomain/>
-	<Transition name="modal">
-		<PortfolioModal v-if="modalOpen" :project="clickedProject" @close="modalOpen = false"/>
-	</Transition>
-	<header id="home">
-		<NameTitle />
-	</header>
-	<GradientOrb />
-	<main>
-		<PageContent id="about">
-			<h3>About Me</h3>
-			<h4>Kumusta, my name is Jedd. I'm a Software Engineer from the Philippines with a Bachelor of Engineering with Honours.</h4>
-			<p>I am passionate about software development, and thrive on collaborative teamwork to create meaningful solutions to everyday problems. Proficient in Java, Python, TypeScript and Vue.js, with experience building and testing REST APIs for backend web application systems. Strong willingness to learn new skills and embrace new technologies.</p>
-			<p>To take my mind off programming, I focus on filmmaking and video editing as an outlet to express my enjoyment of writing and storytelling. I manage a small team at a hobbyist production studio called Corrupted Films which specialises in producing machinimas, a film made using video game graphics.</p>
-			<div class="image-stack__container">
-				<ImageStack />
-			</div>
-		</PageContent>
-		<PageContent id="about">
-			<h3>Education</h3>
-			<div class="preview-grid__container">
-				<PageCard>
-					<h4>Bachelor of Engineering with Honours</h4>
-					<h5>University of Waikato</h5>
-					<h6>Feb 2020 - Oct 2023</h6>
-					<hr>
-					<p>Graduated with First Class Honours. Software Engineering as a specified programme.</p>
-				</PageCard>
-				<PageCard>
-					<h4>NCEA Level 3 Qualification</h4>
-					<h5>High School</h5>
-					<h6>Jan 2015 - Nov 2019</h6>
-					<hr>
-					<p>Graduated with Excellence Endorsement. NCEA Technology Scholarship recipient.</p>
-				</PageCard>
-			</div>
-		</PageContent>
-		<PageContent id="projects">
-			<h3>Projects</h3>
-			<div class="preview-grid__container">
-				<PortfolioPreview v-for="project in highlightedProjectsList"
-								:project="project"
-								@response="(p: any) => clickedProject = p"
-								@click="modalOpen = true" />
-			</div>
-		</PageContent>
-		<PageContent id="contact">
-			<h3>Contact</h3>
-			<h4>Send me your questions and I will write back to you at the earliest convenience.</h4>
-			<p>Also take a look my GitHub profile if you are interested in checking out projects that are not listed under my portfolio. More information about myself on LinkedIn.</p>
-			<ButtonLink text="Send Email" anchor="mailto:jedd.lupoy@gmail.com" icon="bi-envelope" open-blank-page />
-			<h5><i class="bi bi-envelope-fill"></i>jedd.lupoy@gmail.com</h5>
-		</PageContent>
-	</main>
-	<ScrollToTop />
+	<!-- <div class="mouse-move-panel-pseudo" @mousemove="updateBackground"></div> -->
+	<div class="mouse-move-panel" :style="{ background: background }"></div>
+	<div class="clickable" @mousemove="updateBackground">
+		<Transition name="modal">
+			<PortfolioModal v-if="modalOpen" :project="clickedProject" @close="modalOpen = false"/>
+		</Transition>
+		<header id="home">
+			<NameDomain/>
+			<NameTitle />
+		</header>
+		<GradientOrb />
+		<main>
+			<PageContent id="about">
+				<h3>About Me</h3>
+				<h4>Hi, my name is Jedd. I'm a Software Engineer based in New Zealand with a Bachelor of Engineering with Honours.</h4>
+				<p>I am passionate about software development, and thrive on collaborative teamwork to create meaningful solutions to everyday problems. Proficient in Java, Python, TypeScript and Vue.js, with experience building and testing REST APIs for backend web application systems. Strong willingness to learn new skills and embrace new technologies.</p>
+				<p>To take my mind off programming, I focus on filmmaking and video editing as an outlet to express my enjoyment of writing and storytelling. I manage a small team at a hobbyist production studio called Corrupted Films which specialises in producing machinimas, a film made using video game graphics.</p>
+				<!-- <div class="image-stack__container">
+					<ImageStack />
+				</div> -->
+			</PageContent>
+			<PageContent id="about">
+				<h3>Education</h3>
+				<div class="preview-grid__container">
+					<PageCard>
+						<h4>Bachelor of Engineering with Honours</h4>
+						<h5>University of Waikato</h5>
+						<h6>Feb 2020 - Oct 2023</h6>
+						<hr>
+						<p>Graduated with First Class Honours. Software Engineering as a specified programme.</p>
+					</PageCard>
+					<PageCard>
+						<h4>NCEA Level 3 Qualification</h4>
+						<h5>High School</h5>
+						<h6>Jan 2015 - Nov 2019</h6>
+						<hr>
+						<p>Graduated with Excellence Endorsement. NCEA Technology Scholarship recipient.</p>
+					</PageCard>
+				</div>
+			</PageContent>
+			<PageContent id="projects">
+				<h3>Projects</h3>
+				<div class="preview-grid__container">
+					<PortfolioPreview v-for="project in highlightedProjectsList"
+									:project="project"
+									@response="(p: any) => clickedProject = p"
+									@click="modalOpen = true" />
+				</div>
+			</PageContent>
+			<PageContent id="contact">
+				<h3>Contact</h3>
+				<h4>Have any questions or comments? Let's chat.</h4>
+				<p>I am always on the lookout for new interesting opportunities. Check out my GitHub to view more projects. More information about myself on LinkedIn.</p>
+				<ButtonLink text="Send Email" anchor="mailto:jedd.lupoy@gmail.com" icon="bi-envelope" open-blank-page />
+			</PageContent>
+		</main>
+		<ScrollToTop />
+	</div>
 </template>
 
 <style scoped>
+.mouse-move-panel, .mouse-move-panel-pseudo {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+.mouse-move-panel {
+	z-index: -1;
+}
+.mouse-move-panel-pseudo {
+	z-index: 1;
+	pointer-events: auto;
+}
+.clickable {
+	z-index: 2;
+}
+header {
+	max-width: 1280px;
+	margin: 0 auto;
+}
 span a i {
 	margin-right: 0.2rem;
 }

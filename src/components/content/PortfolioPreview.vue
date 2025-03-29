@@ -26,7 +26,7 @@ const clickEvent = function() {
                 <div class="preview__content">
                     <p>
                         {{ project.title ?? defaultProjectTitle }}
-                        <i class="bi bi-box-arrow-up-right"></i>
+                        <i class="bi bi-arrow-up-right"></i>
                     </p>
                     <p>{{ project.summary ?? defaultProjectSummary }}</p>
                     <div class="preview__tags">
@@ -40,8 +40,8 @@ const clickEvent = function() {
 
 <style scoped>
 i {
-    margin-left: 0.7rem;
-    font-size: 1.5rem;
+    margin-left: 0.3rem;
+    font-size: 0.9rem;
 }
 .preview__container {
     transform: scale(1);
@@ -73,7 +73,7 @@ i {
     padding: 1.5rem;
 }
 .preview__content p:first-child {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
 }
 .preview__tags {

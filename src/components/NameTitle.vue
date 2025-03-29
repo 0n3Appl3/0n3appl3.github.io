@@ -54,13 +54,6 @@ const buttons = ref([
     }
 }
 @media screen and (max-width: 700px) {
-    .buttons__container {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        position: absolute;
-        bottom: 1rem;
-    }
     .name-title__name {
         font-size: 3.5rem;
     }

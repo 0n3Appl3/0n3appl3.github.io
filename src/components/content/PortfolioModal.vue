@@ -27,8 +27,8 @@ const openLink = (link: string) => {
                     <PortfolioTag v-for="tool in project.tools" :tag="tool" />
                 </div>
                 <p>{{ project.description }}</p>
-                <button @click="openLink(project.link)">View Project</button>
-                <button @click="openLink(project.video)" v-if="project.video">Watch Demo</button>
+                <button @click="openLink(project.link)">View Project <i class="bi bi-arrow-up-right"></i></button>
+                <button @click="openLink(project.video)" v-if="project.video">Watch Demo <i class="bi bi-play-circle"></i></button>
             </div>
         </div>
     </div>
@@ -37,20 +37,27 @@ const openLink = (link: string) => {
 <style scoped>
 button {
     text-decoration: none;
-    font-size: 0.9rem;
-    padding: 0.6rem 1.3rem;
+    font-size: 0.85rem;
+    padding: 0.4rem 1.1rem;
     margin-top: 2rem;
     margin-right: 1rem;
-    border-radius: 2rem;
+    border-radius: 0.5rem;
     border: 2px solid var(--color-text);
     background-color: var(--color-text);
     color: var(--color-background);
     transition: all 0.15s ease-in-out;
 }
+button:active {
+    scale: 0.9;
+}
 button:hover {
     background-color: var(--color-background);
     color: var(--color-text);
     cursor: pointer;
+}
+button i {
+    font-size: 0.75rem;
+    padding-left: 0.2rem;
 }
 .modal {
     position: fixed;

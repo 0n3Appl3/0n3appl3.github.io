@@ -12,7 +12,7 @@
 img {
     width: 30px;
     height: 30px;
-    margin-right: 0.5rem;
+    margin-right: 0.7rem;
 }
 .domain__text {
     display: flex;

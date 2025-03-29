@@ -17,11 +17,11 @@ const defaultTag = ref('Default Tag')
 <style scoped>
 span {
     display: inline-block;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     background-color: #f64f5927;
     color: #f64f59;
     border-radius: 2rem;
-    padding: 0.5rem 0.8rem;
+    padding: 0.3rem 0.7rem;
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
 }

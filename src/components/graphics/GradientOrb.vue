@@ -1,68 +1,79 @@
 <script setup lang="ts">
+import { onBeforeUnmount, onMounted, ref } from 'vue'
+
+type Orb = {
+	borderRadius: string
+	gradient: string
+}
+
+function orbBorders() {
+	const numberOfOrbs: number = 30
+	const orbs: Orb[] = []
+	const corners: number = 4
+	for (let i = 0; i < numberOfOrbs; i++) {
+		let property: string = ""
+		for (let j = 0; j < corners; j++) {
+			const x: number = Math.floor((Math.random() * 2) + 1)
+			property += (x == 1 ? "100" : "0") + "% "
+		}
+		orbs.push({
+			borderRadius: property.trim(),
+			gradient: `linear-gradient(${Math.random() * 360}deg, #12c2e9 0%, #c471ed 50%, #f64f59)`,
+		})
+	}
+	return orbs
+}
+
+const orbs = ref(orbBorders())
+let interval: number | undefined = undefined
+
+onMounted(() => {
+	interval = setInterval(() => {
+		orbs.value = orbBorders()
+	}, 3000)
+})
+
+onBeforeUnmount(() => {
+	clearInterval(interval)
+})
 </script>
 
 <template>
 	<Transition name="orb-animate" appear>
-		<div class="orb__container"></div>
-	</Transition>
-	<Transition name="orb-animate-two" appear>
-		<div class="orb__container-two"></div>
-	</Transition>
-	<Transition name="portrait-fade" appear>
-		<img class="portrait" src="/images/myself-race-suit-wesmo.png" alt="Me wearing a race suit"/>
+		<div class="orb__grid">
+			<div v-for="orb in orbs" :style="{ borderRadius: orb.borderRadius, background: orb.gradient }"></div>
+		</div>
 	</Transition>
 </template>
 
 <style scoped>
-.portrait {
+.orb__grid {
+	display: grid;
 	position: absolute;
-	height: 90%;
-	bottom: 0;
-	right: 8%;
-	filter: grayscale(80%) drop-shadow(0.5rem 0.5rem 0.75rem #00000063);
-	z-index: -1;
-}
-.orb__container, .orb__container-two {
-    position: absolute;
-    background: rgb(219,43,57);
-	background: linear-gradient(110deg, #12c2e9 0%, #c471ed 50%, #f64f59);
-    z-index: -1;
-}
-.orb__container {
-	position: absolute;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+	grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+	height: 100vh;
+	width: 50%;
 	top: 0;
 	right: 0;
-	border-radius: 33% 67% 72% 28% / 74% 26% 74% 26%;
-	width: 1050px;
-	height: 100%;
+	z-index: -1;
 }
-.orb__container-two {
-	top: 5%;
-	right: 35%;
-	border-radius: 17% 83% 48% 52% / 45% 37% 63% 55%;
-	width: 500px;
-	height: 50%;
+.orb__grid > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+	background: rgb(219,43,57);
+	transition: 1s all cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 .orb-animate-enter-active, .orb-animate-leave-active  {
-  transition: all 2.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+  transition: all 2s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 .orb-animate-enter-from, .orb-animate-leave-to {
-  transform: translate(-80px, -140px);
-  border-radius: 17% 83% 48% 52% / 45% 37% 63% 55%;
-}
-.orb-animate-two-enter-active, .orb-animate-two-leave-active  {
-  transition: all 3.5s cubic-bezier(0.39, 0.575, 0.565, 1);
-}
-.orb-animate-two-enter-from, .orb-animate-two-leave-to {
-  transform: translate(80px, 140px);
-  border-radius: 33% 67% 72% 28% / 74% 26% 74% 26%;
-}
-.portrait-fade-enter-active, .portrait-fade-leave-active  {
-  transition: all 1.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-.portrait-fade-enter-from, .portrait-fade-leave-to {
   opacity: 0;
-  transform: translateY(40px);
+  transform: scale(1.1);
 }
 @media screen and (max-width: 1300px) {
 	.portrait {
@@ -74,28 +85,6 @@
 	.orb__container-two {
 		width: 350px;
 		height: 35%;
-	}
-}
-@media screen and (max-width: 1000px) {
-	.portrait {
-		right: -15%;
-	}
-}
-@media screen and (max-width: 700px) {
-	.portrait {
-		right: 0%;
-		height: 60%;
-	}
-	.orb__container {
-		top: 35%;
-		width: 450px;
-		height: 65%;
-	}
-	.orb__container-two {
-		width: 300px;
-		height: 30%;
-		top: 40%;
-		right: 40%;
 	}
 }
 </style>
